@@ -7,6 +7,7 @@ here is "Products Ads application" technologies
 <br/>-MVVM
 <br/>-RepositoryPattern
 <br/>-RxJava
+<br/>-Firebase
 <br/>-Glide
 <br/>-RecyclerView
 <br/>-please enter username:xxx@gmail.com
