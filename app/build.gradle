@@ -88,4 +88,11 @@ dependencies {
     //matrial design
     implementation 'com.google.android.material:material:1.6.0-alpha01'
 
+    implementation 'com.google.firebase:firebase-auth:21.0.7'
+    implementation 'com.google.firebase:firebase-core:21.1.0'
+
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+
 }
+apply plugin: 'com.google.gms.google-services'

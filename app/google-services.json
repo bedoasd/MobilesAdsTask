@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "125981392883",
+    "project_id": "mobileadstask",
+    "storage_bucket": "mobileadstask.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125981392883:android:0e88f7cc987000127d5c86",
+        "android_client_info": {
+          "package_name": "com.example.mobilesads"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "125981392883-ujj5qnh8714tje33kmouq394us4vtnrf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCz4gm9OJbnub1iMrUr9XJmFBYCWn0paNU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "125981392883-ujj5qnh8714tje33kmouq394us4vtnrf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
