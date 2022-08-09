@@ -9,3 +9,6 @@ here is "Products Ads application" technologies
 <br/>-RxJava
 <br/>-Glide
 <br/>-RecyclerView
+<br/>-please enter username:xxx@gmail.com
+<br/>-please enter password> 8 chars
+
