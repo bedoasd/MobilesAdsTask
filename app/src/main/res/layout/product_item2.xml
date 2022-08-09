@@ -11,19 +11,22 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 
 
         <TextView
             android:id="@+id/product_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
             android:layout_marginTop="@dimen/_10sdp"
+            android:layout_toEndOf="@id/product_price"
             android:text="I phone"
-            android:textSize="@dimen/_18sdp"
             android:textColor="@color/white"
+
+            android:maxLines="1"
+            android:textSize="@dimen/_18sdp"
             android:textStyle="bold" />
 
         <TextView
@@ -31,24 +34,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/product_title"
-            android:layout_marginStart="@dimen/_15sdp"
-            android:layout_marginTop="9dp"
-            android:layout_marginEnd="0dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
             android:textColor="@color/white"
 
-            android:text="Description" />
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_toEndOf="@id/product_price"
+            android:maxLines="3"
+            android:text="Description"
+
+            />
 
         <TextView
+
             android:id="@+id/product_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/_20sdp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="@dimen/_15sdp"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:text="6500"
             android:textColor="@color/white"
+
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="10dp"
+            android:text="6500"
             android:textSize="@dimen/_16sdp" />
 
 

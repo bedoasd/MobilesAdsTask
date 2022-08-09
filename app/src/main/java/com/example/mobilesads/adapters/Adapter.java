@@ -1,6 +1,7 @@
 package com.example.mobilesads.adapters;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +27,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
     private Context mcontext;
     private OnProductClickListener onProductClickListener;
     private ProductsViewModel productsViewModel;
+    int global_position;
 
     public Adapter( Context mcontext, OnProductClickListener onProductClickListener) {
         this.mcontext = mcontext;
@@ -37,8 +39,19 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        int stock=productsList.get(global_position).getStock();
+        Log.v("stock",String.valueOf(stock));
+        if(stock>50)
+        {
+            return new MyViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.product_item2, parent, false), onProductClickListener);
 
-        return new MyViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.product_item, parent, false), onProductClickListener);
+        }
+        else
+        {
+            return new MyViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.product_item, parent, false), onProductClickListener);
+
+        }
+
 
     }
 
@@ -46,7 +59,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-
+        global_position=position;
         holder.producttitle.setText(productsList.get(position).getTitle());
         holder.product_description.setText(productsList.get(position).getDescription());
         holder.product_price.setText(""+String.valueOf(productsList.get(position).getPrice())+"LE");
@@ -87,7 +100,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
     public static class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView producttitle,product_description,product_price;
-        ImageView productImage;
         OnProductClickListener onProductClickListener;
 
         public MyViewHolder(@NonNull View itemView, OnProductClickListener onProductClickListener) {

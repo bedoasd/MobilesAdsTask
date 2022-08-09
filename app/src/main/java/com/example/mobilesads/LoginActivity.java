@@ -48,6 +48,10 @@ public class LoginActivity extends AppCompatActivity {
                     username.setError("Required Field..");
                     return;
                 }
+                if(!user.contains("@gmail.com")){
+                    username.setError("user name Must Contains @gmail.com");
+
+                }
                 if (TextUtils.isEmpty(pass)){
                     password.setError("Required Field..");
                     return;
